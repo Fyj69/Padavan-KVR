@@ -1860,3 +1860,4 @@ JS_shutdown=You need manually power on after shutdown!!! Continue to shutdown?
 BTN_FREEMEMORY=FreeMemory
 
 
+AP_Relay=AP Relay (Automatic Search Switching Channel Signal) [Click to Open Configuration Script]
