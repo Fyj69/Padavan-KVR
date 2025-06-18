@@ -15,6 +15,8 @@ download_test:
 		cd src/liblcb ; \
 		patch -p1 -i ../../../liblcb_msd_lite.diff ; \
 		cd ../../; \
+		sed -i '1i #include <sys/syscall.h>' $(SRC_NAME)/src/liblcb/src/threadpool/threadpool.c ; \
+		sed -i '/return syscall(SYS_pidfd_open, pid, flags);/c\#ifdef SYS_pidfd_open\n    return syscall(SYS_pidfd_open, pid, flags);\n#else\n    errno = ENOSYS;\n    return -1;\n#endif' $(SRC_NAME)/src/liblcb/src/threadpool/threadpool.c ; \
 	fi )
 
 config_test:
