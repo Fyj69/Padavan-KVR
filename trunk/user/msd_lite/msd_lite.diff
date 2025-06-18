@@ -11,3 +11,25 @@ diff --git a/CMakeLists.txt b/CMakeLists.txt
 
  ############################# MACRO SECTION ############################
  macro(try_c_flag prop flag)
+diff --git a/src/liblcb/src/threadpool/threadpool.c b/src/liblcb/src/threadpool/threadpool.c
+--- a/src/liblcb/src/threadpool/threadpool.c
++++ b/src/liblcb/src/threadpool/threadpool.c
+@@ -1,3 +1,4 @@
++#include <sys/syscall.h>
+ /*-
+  * Copyright (c) 2011-2024 Rozhuk Ivan <rozhuk.im@gmail.com>
+  * All rights reserved.
+@@ -539,7 +540,12 @@ tpt_loop(tpt_p tpt) {
+ 
+ static int
+ pidfd_open(pid_t pid, unsigned int flags) {
+-	return syscall(SYS_pidfd_open, pid, flags);
++#ifdef SYS_pidfd_open
++    return syscall(SYS_pidfd_open, pid, flags);
++#else
++    errno = ENOSYS;
++    return -1;
++#endif
+ }
+ 
+ /* Translate thread pool flags <-> epoll flags. */
