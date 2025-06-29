@@ -11,6 +11,8 @@ romfs:
 	$(ROMFSINST) /sbin/mtd_storage.sh
 	$(ROMFSINST) -p +x $(THISDIR)/copyscripts.sh /usr/bin/copyscripts.sh
 	$(ROMFSINST) -p +x $(THISDIR)/autostart.sh /usr/bin/autostart.sh
+	$(ROMFSINST) -p +x $(THISDIR)/ap_script.sh /usr/bin/ap_script.sh
+	$(ROMFSINST) -p +x $(THISDIR)/sh_ezscript.sh /usr/bin/sh_ezscript.sh
 ifeq ($(STORAGE_ENABLED),y)
 	$(ROMFSINST) /sbin/automount.sh
 endif

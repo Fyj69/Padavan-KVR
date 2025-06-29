@@ -864,12 +864,15 @@
 			{"wl_preamble", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_greenap", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_ldpc", "", NULL, EVM_RESTART_WIFI5},
+			{"wl_stbc", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_ssid", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_auth_mode", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_wpa_mode", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_crypto", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_wpa_psk", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_wisp", "", NULL, EVM_RESTART_WIFI5},
+			{"wl_pmf", "", NULL, EVM_RESTART_WIFI5},
+			{"wl_pmfsha256", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_sta_auto", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_guest_enable", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_guest_date_x", "", NULL, EVM_RESTART_WIFI5},
@@ -887,6 +890,7 @@
 			{"wl_guest_mcs_mode", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_KickStaRssiLow", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_AssocReqRssiThres", "", NULL, EVM_RESTART_WIFI5},
+			{"scripts.ap_script.sh", "File", NULL, EVM_RESTART_WIFI5},
 			{"RBRList", "Group", ARGV((char*)variables_WLANConfig11a_RBRList, "16", "32", "wl_wdsnum_x"), EVM_RESTART_WIFI5},
 #endif
 			{0,0,0,0}
@@ -1346,7 +1350,10 @@
 			{"rt_stream_rx", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_preamble", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_greenap", "", NULL, EVM_RESTART_WIFI2},
+			{"rt_pmf", "", NULL, EVM_RESTART_WIFI2},
+			{"rt_pmfsha256", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_ldpc", "", NULL, EVM_RESTART_WIFI2},
+			{"rt_stbc", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_sta_ssid", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_sta_auth_mode", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_sta_wpa_mode", "", NULL, EVM_RESTART_WIFI2},
@@ -1372,6 +1379,7 @@
 			{"rt_guest_mcs_mode", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_KickStaRssiLow", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_AssocReqRssiThres", "", NULL, EVM_RESTART_WIFI2},
+			{"scripts.ap_script.sh", "File", NULL, EVM_RESTART_WIFI2},
 			{"rt_RBRList", "Group", ARGV((char*)variables_WLANConfig11b_rt_RBRList, "16", "32", "rt_wdsnum_x"), EVM_RESTART_WIFI2},
 			{0,0,0,0}
 		};

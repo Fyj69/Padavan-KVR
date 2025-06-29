@@ -107,7 +107,15 @@ WIFIRegionCode=Region Code:
 WIFIStreamTX=HT Spatial Streams TX:
 WIFIStreamRX=HT Spatial Streams RX:
 WIFIGreenAP=Enable Energy Saving Green AP?
-WIFILDPC=Enable LDPC Codes Support?
+WIFIPMF_itemname=Enable PMF?
+WIFIPMF_itemdesc=Enable PMF（Protected Management Frames），The 802.11w standard can defend against attacks specifically targeting WLAN management frames, ensuring the security and stability of wireless communication.
+WIFIPMFsha256=Enable WPA2 SHA256 Support?
+WIFILDPC_itemname=Enable LDPC Codes Support?
+WIFILDPC_itemdesc=Enable support for LDPC encoding allows the use of a more modern error correction standard used to ensure high coding reliability and improve coding efficiency. This thing is mandatory for 11ac, optional for 11n. Required for PMF (802.11w).
+WIFILDPC2_itemname=Enable LDPC Codes Support?
+WIFILDPC2_itemdesc=Enable support for LDPC encoding allows the use of a more modern error correction standard used to ensure high coding reliability and improve coding efficiency.
+WIFISTBC_itemname=Enable STBC Codes Support?
+WIFISTBC_itemdesc=Enable support for STBC encoding allows（Space-Time Block Coding）The support for space-time block coding is an encoding technique used in MIMO (Multiple Input Multiple Output) wireless communication systems. This technology allows multiple antennas to transmit signals in time and space, enhancing the reliability and performance of wireless systems.
 WIFIRDG=Enable Reverse Direction Grant (RDG)?
 WIFIAutoBA=Enable Auto Block Acknowledgment (AutoBA)?
 WIFIVgaClamp=Clamp RX Gain to Reduce Impact Interference:
@@ -576,13 +584,17 @@ BasicConfig_HWNAT_itemname=Enable HW NAT?
 LANHostConfig_x_Password_itemdesc=Password cannot be greater than 32 characters.
 CableStatus=Cable Status
 HowToSharebyFTP5=Use an FTP Client application with UTF-8 support to display non-English characters such as Traditional or Simplified Chinese. Such FTP client application is <a href='http://filezilla-project.org/' target='_blank'>Filezilla</a>, in which you can modify character encoding in the Site Manager/Advanced option.
-WLANConfig11n_band_steering=Enable Band Steering?
-WLANConfig11n_mumimo=Enable MU-MIMO?
-WLANConfig11n_txbf=Enable Transmit Beamforming?
+WLANConfig11n_band_steering_itemname=Enable Band Steering?
+WLANConfig11n_band_steering_itemdesc=Enable Band Steering allows you to combine two Wi-Fi networks from one router (in the 2.4 GHz and 5 GHz bands) into one network (with the same name) and automatically connect devices to the frequency that will provide maximum speed and connection stability.
+WLANConfig11n_mumimo_itemname=Enable MU-MIMO?
+WLANConfig11n_mumimo_itemdesc=Enable MU-MIMO allows data to be transmitted to multiple devices simultaneously over different spatial streams. MU-MIMO reduces network latency and improves overall throughput.
+WLANConfig11n_txbf_itemname=Enable Transmit Beamforming?
+WLANConfig11n_txbf_itemdesc=Enable Transmit Beamforming focuses the Wi-Fi signal in the direction of the wireless client, which improves the stability and speed of data transfer.
 WLANConfig11n_nmode_limition_hint=ZVMODELVZ will change WEP or TKIP encryption to AES in [n Only] mode to ensure that clients to get the proper connection.
 WLANConfig11n_automode_limition_hint=Under [Mixed] mode with WEP or TKIP encryption, ZVMODELVZ supports the maximum transmission rate of 54 Mbps.
 BM_desc_upload=EZQoS automatically detects your uplink speed to help you adjust your network bandwidth. If you can get the exact uplink speed through another way such as an online speed test, we recommend that you enter the speed value in <a href='Advanced_QOSUserSpec_Content.asp'>advanced settings page</a>
-WLANConfig11n_amsdu=Enable AMSDU?
+WLANConfig11n_amsdu_itemname=Enable AMSDU?
+WLANConfig11n_amsdu_itemdesc=Enable A-MSDU aggregation can significantly increase the link throughput, especially with a large number of small packets, but at the same time increase the delay time in case of packet loss due to retransmission of an aggregated packet. Enable AMSDU also increases the load on the processor.
 WLANConfig11n_80211kv=Enable 802.11KV?
 WLANConfig11n_80211r=Enable 802.11R?
 WhiteList=White List
@@ -1860,3 +1872,4 @@ JS_shutdown=You need manually power on after shutdown!!! Continue to shutdown?
 BTN_FREEMEMORY=FreeMemory
 
 
+AP_Relay=AP Relay (Automatic Search Switching Channel Signal) [Click to Open Configuration Script]
