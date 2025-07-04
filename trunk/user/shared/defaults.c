@@ -222,7 +222,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_stream_rx", STR(BOARD_NUM_ANT_5G_RX) },
 	{ "wl_preamble", "1" },
 	{ "wl_greenap", "0" },
-	{ "wl_ldpc", "2" },
+	{ "wl_ldpc", "3" },
 	#if defined (USE_WID_5G) && (USE_WID_5G==7615 || USE_WID_5G==7915)
 	{ "wl_stbc", "3" },
 #else
